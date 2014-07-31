@@ -2,6 +2,7 @@
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Application as App;
+use Illuminate\Support\Facades\Schema;
 
 class PostgresqlSchemaServiceProvider extends ServiceProvider {
 
@@ -33,6 +34,10 @@ class PostgresqlSchemaServiceProvider extends ServiceProvider {
 		{
 		    list($connection, $database, $prefix, $config) = $parameters;
 		    return new PostgresConnection($connection, $database, $prefix, $config);
+		});
+
+		Schema::blueprintResolver(function($table, $callback) {
+			return new Blueprint($table, $callback);
 		});
 	}
 
