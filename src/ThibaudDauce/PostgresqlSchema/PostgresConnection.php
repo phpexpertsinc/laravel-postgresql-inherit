@@ -2,7 +2,7 @@
 
 use Illuminate\Database\PostgresConnection as BasePostgresConnection;
 
-class PostgresqlConnection extends BasePostgresConnection {
+class PostgresConnection extends BasePostgresConnection {
 
   /**
 	 * Get the default schema grammar instance.
