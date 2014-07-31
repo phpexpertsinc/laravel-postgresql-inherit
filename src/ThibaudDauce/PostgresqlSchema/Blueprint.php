@@ -27,7 +27,7 @@ class Blueprint extends BaseBlueprint {
 	 *
 	 * @param  string  $name
 	 */
-	protected function addInheritedTable($name)
+	public function addInheritedTable($name)
 	{
 		$this->inheritedTables[] = $name;
   }
