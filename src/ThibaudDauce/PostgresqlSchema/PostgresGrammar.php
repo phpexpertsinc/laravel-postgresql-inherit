@@ -17,11 +17,14 @@ class PostgresGrammar extends BasePostgresGrammar {
 	 */
 	public function compileCreate(BaseBlueprint $blueprint, Fluent $command)
 	{
-    $sql = parent::compileCreate($blueprint, $command);
-
     $inheritedTables = implode(', ', $this->getInheritedTables($blueprint));
 
-		return $sql . " inherits ($inheritedTables)";
+    $sql = parent::compileCreate($blueprint, $command);
+
+		if (empty($inheritedTables))
+			return $sql;
+		else
+			return $sql . " inherits ($inheritedTables)";
 	}
 
 
