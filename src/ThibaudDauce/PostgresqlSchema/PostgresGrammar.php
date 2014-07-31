@@ -39,7 +39,7 @@ class PostgresGrammar extends BasePostgresGrammar {
 		{
 			$sql = $this->wrapTable($table);
 
-			$tables[] = $this->addModifiers($sql, $blueprint, $column);
+			$tables[] = $this->addModifiers($sql, $blueprint, $table);
 		}
 
 		return $tables;
