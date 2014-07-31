@@ -1,6 +1,8 @@
 {
     "name": "thibaud-dauce/postgresql-schema",
-    "description": "",
+    "description": "Add inheritance in postgresql tables",
+    "license": "MIT",
+    "keywords": ["laravel", "postgres", "postresql", "database", "migrations", "inheritance"],
     "authors": [
         {
             "name": "Thibaud Dauce",
