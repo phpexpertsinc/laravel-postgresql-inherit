@@ -3,6 +3,7 @@
 use Illuminate\Database\Schema\Grammars\PostgresGrammar as BasePostgresGrammar;
 use Illuminate\Support\Fluent;
 use ThibaudDauce\PostgresqlSchema\Blueprint;
+use Illuminate\Database\Schema\Blueprint as BaseBlueprint;
 
 class PostgresGrammar extends BasePostgresGrammar {
 
@@ -14,7 +15,7 @@ class PostgresGrammar extends BasePostgresGrammar {
 	 * @param  \Illuminate\Support\Fluent  $command
 	 * @return string
 	 */
-	public function compileCreate(Blueprint $blueprint, Fluent $command)
+	public function compileCreate(BaseBlueprint $blueprint, Fluent $command)
 	{
     $sql = parent::compileCreate($blueprint, $command);
 
