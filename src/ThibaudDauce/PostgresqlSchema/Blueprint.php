@@ -4,13 +4,12 @@ use Illuminate\Database\Schema\Blueprint as BaseBlueprint;
 
 class Blueprint extends BaseBlueprint {
 
-  /**
+	/**
 	 * The inherited tables that should be added to the table.
 	 *
 	 * @var array
 	 */
 	protected $inheritedTables = array();
-
 
 	/**
 	 * Get the inherited tables that should be added.
@@ -22,7 +21,7 @@ class Blueprint extends BaseBlueprint {
 		return $this->inheritedTables;
 	}
 
-  /**
+	/**
 	 * Add a new inherited table to the blueprint.
 	 *
 	 * @param  string  $name
@@ -30,6 +29,6 @@ class Blueprint extends BaseBlueprint {
 	public function addInheritedTable($name)
 	{
 		$this->inheritedTables[] = $name;
-  }
+	}
 
 }

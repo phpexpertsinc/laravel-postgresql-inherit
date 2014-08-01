@@ -4,7 +4,7 @@ use Illuminate\Database\PostgresConnection as BasePostgresConnection;
 
 class PostgresConnection extends BasePostgresConnection {
 
-  /**
+	/**
 	 * Get the default schema grammar instance.
 	 *
 	 * @return \ThibaudDauce\PostgresqlSchema\PostgresGrammar

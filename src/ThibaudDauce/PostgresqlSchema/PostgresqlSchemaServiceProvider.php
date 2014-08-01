@@ -32,8 +32,8 @@ class PostgresqlSchemaServiceProvider extends ServiceProvider {
 	{
 		\App::singleton('db.connection.pgsql', function(App $app, array $parameters)
 		{
-		    list($connection, $database, $prefix, $config) = $parameters;
-		    return new PostgresConnection($connection, $database, $prefix, $config);
+			list($connection, $database, $prefix, $config) = $parameters;
+			return new PostgresConnection($connection, $database, $prefix, $config);
 		});
 	}
 
