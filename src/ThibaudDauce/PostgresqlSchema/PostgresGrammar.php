@@ -22,9 +22,9 @@ class PostgresGrammar extends BasePostgresGrammar {
 		$sql = parent::compileCreate($blueprint, $command);
 
 		if (empty($inheritedTables))
-		return $sql;
+			return $sql;
 		else
-		return $sql . " inherits ($inheritedTables)";
+			return $sql . " inherits ($inheritedTables)";
 	}
 
 
