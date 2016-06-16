@@ -4,17 +4,18 @@ namespace jumper423\LaravelDataBase;
 
 use Illuminate\Database\Schema\Grammars\PostgresGrammar as BasePostgresGrammar;
 use Illuminate\Support\Fluent;
+use Illuminate\Database\Schema\Blueprint as BaseBlueprint;
 
 class PostgresGrammar extends BasePostgresGrammar
 {
     /**
      * Compile a create table command.
      *
-     * @param  Blueprint $blueprint
+     * @param  BaseBlueprint $blueprint
      * @param  \Illuminate\Support\Fluent $command
      * @return string
      */
-    public function compileCreate(Blueprint $blueprint, Fluent $command)
+    public function compileCreate(BaseBlueprint $blueprint, Fluent $command)
     {
         $inheritedTables = implode(', ', $this->getInheritedTables($blueprint));
         $sql = parent::compileCreate($blueprint, $command);
@@ -28,13 +29,14 @@ class PostgresGrammar extends BasePostgresGrammar
     /**
      * Compile the blueprint's inherits definitions.
      *
-     * @param  Blueprint $blueprint
+     * @param  BaseBlueprint $blueprint
      * @return array
      */
-    protected function getInheritedTables(Blueprint $blueprint)
+    protected function getInheritedTables(BaseBlueprint $blueprint)
     {
         $tables = [];
         foreach ($blueprint->getInheritedTables() as $table) {
+            //$sql = $this->wrapTable($table);
             $tables[] = $table;
         }
         return $tables;
