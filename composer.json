@@ -1,5 +1,5 @@
 {
-    "name": "thibaud-dauce/postgresql-schema",
+    "name": "jumper423/laravel-postgresql-inherit",
     "description": "Add inheritance in postgresql tables",
     "license": "MIT",
     "keywords": ["laravel", "postgres", "postresql", "database", "migrations", "inheritance"],
@@ -7,20 +7,24 @@
         {
             "name": "Thibaud Dauce",
             "email": "thibaud@dauce.fr"
+        },
+        {
+            "name": "Pasechnik Vlad",
+            "email": "jump.e.r@yandex.ru"
         }
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "4.2.*",
-        "illuminate/database": "4.2.*"
+        "illuminate/support": "5.2.*",
+        "illuminate/database": "5.2.*"
     },
     "require-dev": {
         "mockery/mockery": "~0.9",
         "phpunit/phpunit": "~4.0"
     },
     "autoload": {
-        "psr-0": {
-            "ThibaudDauce\\PostgresqlSchema": "src/"
+        "psr-4": {
+            "jumper423\\LaravelDataBase\\": "src/"
         }
     },
     "minimum-stability": "stable"
