@@ -26,6 +26,5 @@
         "psr-4": {
             "jumper423\\LaravelDataBase\\": "src/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }
